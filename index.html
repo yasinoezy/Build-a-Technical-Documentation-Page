@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Order Printer Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Order Printer Documentation</header>
+        <a class="nav-link" href="#Introduction" id="Introduction_link">Introduction</a>
+        <a class="nav-link" href="#Setup" id="Setup_link">Setup</a>
+        <a class="nav-link" href="#Configuration" id="Configuration_link">Configuration</a>
+        <a class="nav-link" href="#Printing_Workflow" id="Printing_Workflow_link">Printing Workflow</a>
+        <a class="nav-link" href="#Troubleshooting" id="Troubleshooting_link">Troubleshooting</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+                The Automatic Order Printer for restaurants simplifies the process of managing orders by directly printing customer requests from the ordering system. This documentation provides a comprehensive overview of its functionalities and how to use it effectively.
+            </p>
+            <p>
+                This system is designed to enhance workflow efficiency, reduce human errors, and improve overall service speed.
+            </p>
+        </section>
+
+        <section class="main-section" id="Setup">
+            <header>Setup</header>
+            <p>
+                To set up the Automatic Order Printer, follow these steps:
+            </p>
+            <ul>
+                <li>Unbox the printer and connect it to a power source.</li>
+                <li>Connect the printer to the restaurant's network (via Wi-Fi or Ethernet).</li>
+                <li>Install the printer driver on the restaurant's computer system.</li>
+            </ul>
+            <p>Run the following command to check if the printer is connected:</p>
+            <code>
+Step 1: Initialize the order system<br>
+<br>
+class OrderSystem {
+    constructor() {
+        this.orders = [];
+    }
+
+    init() {
+        console.log("Order system initialized.");
+    }
+}
+
+const orderSystem = new OrderSystem();
+orderSystem.init();
+</code>
+
+<code>
+Step 2: Create an order for a table<br>
+<br>
+function createOrder(tableNumber, items) {
+    const order = {
+        tableNumber: tableNumber,
+        items: items,
+        status: 'Received',
+    };
+    return order;
+}
+
+const newOrder = createOrder(5, ['Pizza', 'Salad']);
+console.log('New order created:', newOrder);
+</code>
+
+<code>
+Step 3: Add the order to the system's order list<br>
+<br>
+function addOrderToSystem(order) {
+    orderSystem.orders.push(order);
+    console.log("Order added:", order);
+}
+
+addOrderToSystem(newOrder);
+</code>
+
+<code>
+Step 4: Process the payment for the order<br>
+<br>
+function processPayment(order) {
+    console.log(`Processing payment for Table ${order.tableNumber}...`);
+    order.status = 'Paid';
+    console.log(`Order status updated to: ${order.status}`);
+}
+
+processPayment(newOrder);
+</code>
+
+<code>
+Step 5: Send a notification to the customer<br>
+<br>
+function sendNotification(order) {
+    console.log(`Notification sent to Table ${order.tableNumber}: Your order is now ${order.status}.`);
+}
+
+sendNotification(newOrder);
+</code>
+
+<p>
+    These 5 steps demonstrate how the restaurant's automated ordering system works: initializing the system, creating and adding orders, processing payments, and notifying customers.
+</p>
+
+            <p>
+                Ensure the connection is stable before proceeding.
+            </p>
+        </section>
+
+        <section class="main-section" id="Configuration">
+            <header>Configuration</header>
+            <p>
+                Configuring the printer involves setting the paper size, print quality, and order format. Adjust the settings through the printer's web interface or the dedicated software provided.
+            </p>
+            <p>Example configuration JSON:</p>
+            <code>
+                {
+                    "paperSize": "80mm",
+                    "printQuality": "High",
+                    "orderFormat": "Standard"
+                }
+            </code>
+        </section>
+
+        <section class="main-section" id="Printing_Workflow">
+            <header>Printing Workflow</header>
+            <p>
+                The printer automatically receives and prints orders in the following sequence:
+            </p>
+            <ol>
+                <li>The customer places an order on the ordering system.</li>
+                <li>The order is transmitted to the printer through the network.</li>
+                <li>The printer processes the data and prints the receipt.</li>
+            </ol>
+            <p>
+                The system supports different print formats and can be customized according to the restaurant's needs.
+            </p>
+        </section>
+
+        <section class="main-section" id="Troubleshooting">
+            <header>Troubleshooting</header>
+            <p>
+                Common issues and solutions:
+            </p>
+            <ul>
+                <li><strong>Printer not connecting:</strong> Ensure that the printer's IP address matches the one configured in the system.</li>
+                <li><strong>Prints are blank:</strong> Check the paper orientation and toner levels.</li>
+                <li><strong>Slow printing:</strong> Verify network stability and print quality settings.</li>
+            </ul>
+            <p>If problems persist, restart the printer and the network router.</p>
+            <p>Contact support with the following command output:</p>
+            <code>printer_status --verbose</code>
+        </section>
+    </main>
+</body>
+</html>
